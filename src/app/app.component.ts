@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { PhotoListComponent } from './components/photo-list/photo-list.component';
 
 @Component({
   selector: 'app-root',
+  template: `<app-photo-list></app-photo-list>`,
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [PhotoListComponent,],
 })
-export class AppComponent {
-  title = 'photo-app';
-}
+export class AppComponent {}

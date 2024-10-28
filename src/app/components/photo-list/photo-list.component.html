@@ -1,0 +1,14 @@
+<div *ngIf="loading$ | async" class="loader">
+  Loading photos...
+</div>
+
+<div *ngIf="!(loading$ | async) as notLoading">
+  <div *ngIf="photos$ | async as photos" @fadeIn>
+    <app-photo
+      *ngFor="let photo of photos"
+      [title]="photo.title"
+      [url]="photo.image"
+      [thumbnailUrl]="photo.image"
+    ></app-photo>
+  </div>
+</div>
